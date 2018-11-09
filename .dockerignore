@@ -1,0 +1,6 @@
+*
+!src
+!.babelrc
+!package.json
+!gulpfile.babel.js
+!process.json

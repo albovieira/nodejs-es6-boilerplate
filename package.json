@@ -1,0 +1,53 @@
+{
+  "name": "_project_",
+  "version": "1.0.1",
+  "description": "_project_",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "node_modules/.bin/babel lib --out-dir bin/lib --source-maps false  && export NODE_ENV=development && babel-watch index.js && nodemon index.js",
+    "prestart": "node_modules/.bin/babel lib --out-dir bin/lib --source-maps false",
+    "start": "node index.js",
+    "test": "cross-env NODE_ENV=test node_modules/.bin/nyc --require babel-register --check-coverage --lines 80 node_modules/.bin/mocha --timeout 10000 --bail ./test/setup.js \"./test/**/*.spec.js\"",
+    "prebuild": "node_modules/.bin/del bin/lib",
+    "build": "node_modules/.bin/babel lib --out-dir bin/lib --source-maps false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "_project_"
+  },
+  "license": "SEE LICENSE IN license.md",
+  "homepage": "_project_",
+  "dependencies": {
+    "babel-watch": "^2.0.7",
+    "body-parser": "^1.17.2",
+    "compression": "^1.6.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "express-winston": "^2.4.0",
+    "joi": "^10.5.0",
+    "mongodb": "^2.2.27",
+    "newrelic": "^1.40.0",
+    "redis": "^2.7.1",
+    "uuid": "^3.0.1",
+    "verror": "^1.10.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "cross-env": "^5.0.1",
+    "del-cli": "^1.1.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-chai-friendly": "^0.3.6",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "sinon": "^2.3.5"
+  }
+}

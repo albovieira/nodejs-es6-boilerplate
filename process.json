@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "_project_",
+      "script": "./bin/lib/server.js",
+      "exec_mode": "cluster",
+      "instances": 0
+    }
+  ]
+}

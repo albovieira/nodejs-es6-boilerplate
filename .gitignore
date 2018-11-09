@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+newrelic_agent.log
+bin
+coverage
+.nyc_output
+.env
+.idea
