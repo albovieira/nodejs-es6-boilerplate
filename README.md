@@ -1,3 +1,13 @@
-## Documentação
+## BOILERPLATE NODEJS ES6
 
-**_TODO_**
+# Install packages
+
+```
+yarn
+```
+
+# Live reload
+
+```
+yarn dev
+```
