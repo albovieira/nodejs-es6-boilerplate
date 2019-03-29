@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  require('./lib/server.js');
+  require('./src/server.js');
 } else {
-  require('./bin/lib/server.js');
+  require('./bin/src/server.js');
 }

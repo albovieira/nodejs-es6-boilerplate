@@ -5,12 +5,12 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/babel lib --out-dir bin/lib --source-maps false  && export NODE_ENV=development && babel-watch index.js && nodemon index.js",
-    "prestart": "node_modules/.bin/babel lib --out-dir bin/lib --source-maps false",
+    "dev": "node_modules/.bin/babel lib --out-dir bin/src --source-maps false  && export NODE_ENV=development && babel-watch index.js && nodemon index.js",
+    "prestart": "node_modules/.bin/babel lib --out-dir bin/src --source-maps false",
     "start": "node index.js",
     "test": "cross-env NODE_ENV=test node_modules/.bin/nyc --require babel-register --check-coverage --lines 80 node_modules/.bin/mocha --timeout 10000 --bail ./test/setup.js \"./test/**/*.spec.js\"",
-    "prebuild": "node_modules/.bin/del bin/lib",
-    "build": "node_modules/.bin/babel lib --out-dir bin/lib --source-maps false"
+    "prebuild": "node_modules/.bin/del bin/src",
+    "build": "node_modules/.bin/babel lib --out-dir bin/src --source-maps false"
   },
   "repository": {
     "type": "git",

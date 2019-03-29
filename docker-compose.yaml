@@ -10,7 +10,7 @@ services:
     networks:
       - my-network
   redis:
-    image: 'bitnami/redis:latest'
+    image: 'redis:latest'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
